@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido anticipado | Aroma Local</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-amber-50 text-stone-900">
+    <div
+      class="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.28),_transparent_35%),linear-gradient(180deg,_rgba(255,251,235,1)_0%,_rgba(255,247,237,1)_100%)]"
+      itemscope
+      itemtype="https://schema.org/CafeOrCoffeeShop"
+    >
+      <main class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-10 lg:py-14">
+        <section class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div class="space-y-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-amber-800">
+              Pedido anticipado
+            </p>
+            <h1 class="max-w-xl text-4xl font-black tracking-tight text-stone-950 sm:text-5xl">
+              Reserva tu pausa perfecta y recoge tu pedido sin hacer fila.
+            </h1>
+            <p class="max-w-2xl text-base leading-7 text-stone-700 sm:text-lg">
+              Selecciona tus favoritos, elige una franja de recogida y deja cualquier detalle
+              importante para que tu pedido esté listo justo a tiempo.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <article class="rounded-3xl border border-amber-200 bg-white/85 p-4 shadow-sm">
+                <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-amber-900">Recogida rápida</h2>
+                <p class="mt-2 text-sm text-stone-700">Franja horaria clara para preparar cada pedido con margen.</p>
+              </article>
+              <article class="rounded-3xl border border-amber-200 bg-white/85 p-4 shadow-sm">
+                <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-amber-900">Hecho a tu gusto</h2>
+                <p class="mt-2 text-sm text-stone-700">Añade notas sobre leche, azúcar, temperatura o empaque.</p>
+              </article>
+              <article class="rounded-3xl border border-amber-200 bg-white/85 p-4 shadow-sm">
+                <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-amber-900">Sabores de casa</h2>
+                <p class="mt-2 text-sm text-stone-700">Café, bakery y opciones saladas para armar un combo completo.</p>
+              </article>
+            </div>
+          </div>
+
+          <section class="rounded-[2rem] border border-amber-200 bg-white/90 p-6 shadow-xl shadow-amber-950/10 sm:p-8" aria-labelledby="pedido-heading">
+            <h2 id="pedido-heading" class="text-2xl font-black text-stone-950">Realiza tu pedido</h2>
+            <p class="mt-2 text-sm leading-6 text-stone-600">
+              Completa el formulario con tus datos y selecciona al menos tres productos.
+            </p>
+
+            <form class="mt-8 space-y-8">
+              <section class="space-y-3">
+                <label for="customer-name" class="block text-sm font-semibold text-stone-800">Nombre del cliente</label>
+                <input
+                  id="customer-name"
+                  name="customer-name"
+                  type="text"
+                  placeholder="Ej. Valentina Ruiz"
+                  class="w-full rounded-2xl border border-stone-300 bg-amber-50 px-4 py-3 text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-700 focus:ring-4 focus:ring-amber-200"
+                  required
+                />
+              </section>
+
+              <section class="space-y-3">
+                <label for="pickup-time" class="block text-sm font-semibold text-stone-800">Hora de recogida</label>
+                <select
+                  id="pickup-time"
+                  name="pickup-time"
+                  class="w-full rounded-2xl border border-stone-300 bg-amber-50 px-4 py-3 text-stone-900 outline-none transition focus:border-amber-700 focus:ring-4 focus:ring-amber-200"
+                  required
+                >
+                  <option value="">Selecciona una franja horaria</option>
+                  <option value="08:00-09:00">08:00 - 09:00</option>
+                  <option value="10:00-11:00">10:00 - 11:00</option>
+                  <option value="13:00-14:00">13:00 - 14:00</option>
+                  <option value="16:00-17:00">16:00 - 17:00</option>
+                </select>
+              </section>
+
+              <fieldset class="space-y-4">
+                <legend class="text-sm font-semibold text-stone-800">Selecciona al menos tres productos</legend>
+                <div class="grid gap-3">
+                  <label class="flex cursor-pointer items-start gap-3 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 transition hover:border-amber-300 hover:bg-amber-50">
+                    <input type="checkbox" name="products" value="flat-white" class="mt-1 h-4 w-4 rounded border-stone-300 text-amber-800 focus:ring-amber-300" />
+                    <span>
+                      <span class="block font-semibold text-stone-900">Flat White</span>
+                      <span class="block text-sm text-stone-600">Espresso doble con leche vaporizada.</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 transition hover:border-amber-300 hover:bg-amber-50">
+                    <input type="checkbox" name="products" value="cold-brew" class="mt-1 h-4 w-4 rounded border-stone-300 text-amber-800 focus:ring-amber-300" />
+                    <span>
+                      <span class="block font-semibold text-stone-900">Cold Brew</span>
+                      <span class="block text-sm text-stone-600">Extracción lenta, suave y refrescante.</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 transition hover:border-amber-300 hover:bg-amber-50">
+                    <input type="checkbox" name="products" value="croissant" class="mt-1 h-4 w-4 rounded border-stone-300 text-amber-800 focus:ring-amber-300" />
+                    <span>
+                      <span class="block font-semibold text-stone-900">Croissant de mantequilla</span>
+                      <span class="block text-sm text-stone-600">Hojaldre dorado horneado cada mañana.</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 transition hover:border-amber-300 hover:bg-amber-50">
+                    <input type="checkbox" name="products" value="bagel" class="mt-1 h-4 w-4 rounded border-stone-300 text-amber-800 focus:ring-amber-300" />
+                    <span>
+                      <span class="block font-semibold text-stone-900">Bagel de salmón</span>
+                      <span class="block text-sm text-stone-600">Queso crema, rúcula y salmón ahumado.</span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <section class="space-y-3">
+                <label for="special-instructions" class="block text-sm font-semibold text-stone-800">Instrucciones especiales</label>
+                <textarea
+                  id="special-instructions"
+                  name="special-instructions"
+                  rows="5"
+                  placeholder="Ej. Sin azúcar, leche de avena, cortar a la mitad..."
+                  class="w-full rounded-2xl border border-stone-300 bg-amber-50 px-4 py-3 text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-amber-700 focus:ring-4 focus:ring-amber-200"
+                ></textarea>
+              </section>
+
+              <button
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-full bg-amber-900 px-6 py-3 text-base font-semibold text-amber-50 transition hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-300"
+              >
+                Realizar pedido
+              </button>
+            </form>
+          </section>
+        </section>
+      </main>
+
+    </div>
+  </body>
+</html>
